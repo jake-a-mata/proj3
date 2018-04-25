@@ -59,12 +59,17 @@ int main(int argc, char *argv[]){
     }
     else{
       printf("before: %s\n", buf);
-      chdir(argv[1]);
-//      int retval = chdir(argv[2]);
-//      if(retval < 0){ fprintf(stderr, "directory not found.\n";);
-      buf = pwd();
-      printf("after: %s\n", buf);
-      char *args[] = {"touch", "test.txt"};
-      execvp(args[0], args);
+//      chdir(argv[1]);
+      int retval = chdir(argv[1]);
+      if(retval < 0){ fprintf(stderr, "directory not found.\n");
+      else{
+        buf = pwd();
+        printf("after: %s\n", buf);
+        char command[256];
+	snprintf(command, sizeof(command), "touch %s", "test.txt");
+	system(command);
+//        char *args[] = {"touch", "test.txt"};
+//        execvp(args[0], args);
+      }
     }
 }
