@@ -35,6 +35,10 @@ int main(int argc, char **argv) {
       if(S_ISDIR(path_stat.st_mode)) {
          execvp( buf[0], buf);
       }
+      else if(strcmp(arg1, "-l") == 0) {
+         execvp(buf[0], buf); 
+
+      }      
       else {
          printf("Directory does not exist.\n"); 
       }
