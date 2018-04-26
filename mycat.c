@@ -12,7 +12,7 @@ int main(int argc, char **argv) {
 		printf("please enter at least 1 argument to read");
 	}
 	
- 	printf("%d",argc);	
+ 	//printf("%d",argc);	
 //	printf("%s\n",argv[1]);
 
 //	if (argv[1][0] == '<'){
