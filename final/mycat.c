@@ -12,17 +12,8 @@ int main(int argc, char **argv) {
 		printf("please enter at least 1 argument to read");
 	}
 	
- 	//printf("%d",argc);	
-//	printf("%s\n",argv[1]);
-
-//	if (argv[1][0] == '<'){
-//		printf("carrot detected");	
-//	}
-//	printf("%s\n",argv[2]);
-//	printf("%s\n",argv[3]);
-//	printf("%s\n",argv[4]);
-
-	char *input[3];
+ 	
+    char *input[3];
     input[0] = "cat";
     input[1] = argv[1];
     input[2] = 0;
