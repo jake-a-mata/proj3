@@ -61,7 +61,7 @@ int main(int argc, char *argv[]){
       printf("before: %s\n", buf);
 //      chdir(argv[1]);
       int retval = chdir(argv[1]);
-      if(retval < 0){ fprintf(stderr, "directory not found.\n");
+      if(retval < 0){ fprintf(stderr, "directory not found.\n");}
       else{
         buf = pwd();
         printf("after: %s\n", buf);
